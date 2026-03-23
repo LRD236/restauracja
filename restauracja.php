@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Restauracja Wszystkie Smaki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section id="baner">
+    <h1>Witamy w restauracji „Wszystkie Smaki”</h1>
+</section>
+
+<section id="lewy">
+    <img src="epstein.webp" alt="Nasze danie">
+</section>
+
+<section id="prawy">
+    <h4>U nas dobrze zjesz!</h4>
+    <ol>
+        <li>Obiady od 40 zł</li>
+        <li>Przekąski od 10 zł</li>
+        <li>Kolacje od 20 zł</li>
+    </ol>
+</section>
+
+<section id="dolny">
+    <h2>Zarezerwuj stolik on-line</h2>
+
+    <form action="rezerwacja.php" method="post">
+
+        <p>Data (format rrrr-mm-dd):</p>
+        <input type="text" name="data">
+
+        <p>Ile osób?</p>
+        <input type="number" name="osoby">
+
+        <p>Twój numer telefonu:</p>
+        <input type="text" name="telefon">
+
+        <br><br>
+
+        <input type="checkbox" name="zgoda">
+        Zgadzam się na przetwarzanie moich danych osobowych
+
+        <br><br>
+
+        <input type="reset" value="WYCZYŚĆ">
+        <input type="submit" value="REZERWUJ" name='rezerwuj'>
+
+    </form>
+</section>
+
+<section id="stopka">
+    <p>Stronę internetową opracował: <i>xyz</i></p>
+</section>
+
+
+<?php
+if(isset($_POST['rezerwuj'])){
+    echo"test";
+}
+?>
+</body>
+</html>
